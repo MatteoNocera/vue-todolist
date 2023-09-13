@@ -27,8 +27,8 @@
             <ul v-if="tasks.length > 0">
                 <li v-for="(task, index) in tasks" :class="[task.done != done ? 'text-decoration-line-through' : '']">{{task.text}}
                     <i @click="removeTask(index)" class="fa-solid fa-circle-xmark fa"></i>
-                    <input type="checkbox" id="index" v-model="done" />
-                    <label for="checkbox">{{done}}</label>
+                    <input type="checkbox" :id="index" v-model="task.done"/>
+                    <label :for="index">{{done}}</label>
                 </li>
             </ul>
             <h2 v-else>Bravo 🎉, hai fatto tutto ✅</h2>
