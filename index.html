@@ -18,8 +18,8 @@
             <input class="" type="text" name="newTask" id="newTask" placeholder="Aggiungi azione">
             <button>Aggiungi</button>
 
-            <ul v-if="tanks.length > 0">
-                <li v-for="(tank, index) in tanks">{{tank.text}} - {{index + 1}}</li>
+            <ul v-if="tasks.length > 0">
+                <li v-for="(task, index) in tasks" :class="[task.done != done ? 'text-decoration-line-through' : '']">{{task.text}} - {{index + 1}}</li>
                 
             </ul>
             <h2 v-else>Bravo 🎉, hai fatto tutto ✅</h2>
@@ -31,3 +31,4 @@
     <script src="./assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>
+

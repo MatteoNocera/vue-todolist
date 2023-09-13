@@ -19,20 +19,27 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        tanks : [
+        done : true,
+        tasks : [
             {
                 text: 'fare la spesa',
                 done: false
             },
             {
                 text: 'fare la doccia',
-                done: false
+                done: true
             }
         ]
         
       }
     },
-    methods() {
-        
+    methods: {
+        check() {
+            if (task.done == true){
+                console.log('pippo')
+            }
+        }
     }
   }).mount('#app')
+
+ 
