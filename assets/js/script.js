@@ -22,7 +22,7 @@ const { createApp } = Vue
         done : '',
         newTask : {
             text: '',
-            done: 'false'
+            done: false
         },
         tasks : [
             
@@ -37,9 +37,12 @@ const { createApp } = Vue
         addTask() {
             console.log(this);
             if (this.addTask != '') {
-                this.tasks.unshift(this.newTask.text);
-                console.log(this.newTask);
+                this.tasks.unshift({
+                    ...this.newTask});
+                console.log(this.tasks);
+                
             }
+
         }
     }
   }).mount('#app')
