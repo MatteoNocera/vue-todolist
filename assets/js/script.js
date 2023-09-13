@@ -19,7 +19,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        done : true,
+        done : false,
         tasks : [
             {
                 text: 'fare la spesa',
