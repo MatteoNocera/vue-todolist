@@ -19,16 +19,13 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        done : false,
+        done : '',
+        newTask : {
+            text: '',
+            done: 'false'
+        },
         tasks : [
-            {
-                text: 'fare la spesa',
-                done: false
-            },
-            {
-                text: 'fare la doccia',
-                done: true
-            }
+            
         ]
         
       }
@@ -36,6 +33,13 @@ const { createApp } = Vue
     methods: {
         removeTask(index) {
             this.tasks.splice(index, 1);
+        },
+        addTask() {
+            console.log(this);
+            if (this.addTask != '') {
+                this.tasks.unshift(this.newTask.text);
+                console.log(this.newTask);
+            }
         }
     }
   }).mount('#app')
