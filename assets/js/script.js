@@ -19,7 +19,17 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        tanks : [
+            {
+                text: 'fare la spesa',
+                done: false
+            },
+            {
+                text: 'fare la doccia',
+                done: false
+            }
+        ]
+        
       }
     }
   }).mount('#app')
