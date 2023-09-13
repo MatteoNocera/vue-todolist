@@ -41,7 +41,8 @@ const { createApp } = Vue
                     ...this.newTask});
                 console.log(this.tasks);
                 
-            }
+            };
+            this.newTask.text = '';
 
         }
     }
