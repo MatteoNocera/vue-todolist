@@ -34,10 +34,8 @@ const { createApp } = Vue
       }
     },
     methods: {
-        check() {
-            if (task.done == true){
-                console.log('pippo')
-            }
+        removeTask(index) {
+            this.tasks.splice(index, 1);
         }
     }
   }).mount('#app')
